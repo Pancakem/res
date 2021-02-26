@@ -1,0 +1,182 @@
+% LaTeX source of my resume
+% =========================
+
+% Commented for easy reuse... ;)
+
+% See the `README.md` file for more info.
+
+% This file is licensed under the CC-NC-ND Creative Commons license.
+
+
+% Start a document with the here given default font size and paper size.
+\documentclass[10pt,a4paper]{article}
+
+% Set the page margins.
+\usepackage[a4paper,margin=0.75in]{geometry}
+
+% Setup the language.
+\usepackage[english]{babel}
+\hyphenation{Some-long-word}
+
+% Makes resume-specific commands available.
+\usepackage{resume}
+
+
+
+
+\begin{document}  % begin the content of the document
+\sloppy  % this to relax whitespacing in favour of straight margins
+
+
+% title on top of the document
+\maintitle{Marvin Ouma}{Last update on \today}
+
+\nobreakvspace{0.3em}  % add some page break averse vertical spacing
+
+% \noindent prevents paragraph's first lines from indenting
+% \mbox is used to obfuscate the email address
+% \sbull is a spaced bullet
+% \href well..
+% \\ breaks the line into a new paragraph
+\noindent\href{mailto:oumamarvin.at.gmail.dot.com}{oumamarvin\mbox{}@\mbox{}gmail.com}\sbull
+\textsmaller{+}254.722901642\sbull
+\href{https://github.com/pancakem}{github.com/pancakem}\sbull
+\\
+Nairobi \sbull
+Kenya
+
+\spacedhrule{0.9em}{-0.4em}  % a horizontal line with some vertical spacing before and after
+
+\roottitle{Summary}  % a root section title
+
+\vspace{-1.3em}  % some vertical spacing
+\begin{multicols}{2}  % open a multicolumn environment
+\noindent \emph{Entrepeneurial geek with roots in the open source movement. Passionately enabling software-related teams to deliver. Creates/\,structures/\,improves processes. Architects and helps to implement future-proof solutions.}
+\\
+\\
+I started programming, purely, for class until I read \emph{C The
+  Programming Language}. Since then I have taught myself system
+administration and programming in a few languages. During my
+exploration, I got introduced to the open source movement and I have
+contributed to both personal and organization projects. I also have
+gotten to experiment with micro-controllers and I am of the opinion
+they are really fun.
+\end{multicols}
+
+
+\spacedhrule{0em}{-0.4em}
+
+\roottitle{Experience}
+\headedsection
+  {\href{https://eacdirectory.co.ke}{EACDirectory}}
+  {\textsc{Remote}} {%
+  \headedsubsection
+    {Systems Administration Intern}
+    {Dec \apo20 -- Jan \apo21}
+    {\bodytext{Trained on how to install, configure and administer
+        popular web-based web hosting control panels. Wrote automation
+        scripts in Bash and Python.
+      }}
+}
+
+\headedsection
+  {\href{http://www.littlekidogo.co.za}{Little Kidogo}}
+  {\textsc{Nairobi, Kenya}} {%
+  \headedsubsection
+    {Embedded Systems Engineer}
+    {May \apo20 -- Oct \apo20}
+    {\bodytext{I developed and maintained drivers for a custom Rust
+        kernel. Helped design and build a race timer trap with the
+        ESP32 micro-controller. Involved in the building of a GraphQL
+        service to report on the data from the ESP32 race timer trap.
+      }}
+}
+
+\headedsection
+  {\href{http://www.moot.co.ke}{Moot Insights}}
+  {\textsc{Nairobi, Kenya}} {%
+  \headedsubsection
+    {Backend Engineer}
+    {Sep \apo20 -- Aug \apo20}
+    {\bodytext{Architected and built various micro-services; a few
+        being a notification server and payment service with the
+        M-Pesa gateway. Established test automation and continuous
+        integration with Travis CI. Did extensive documentation of the
+        developed systems.
+      }
+    }
+}
+
+\headedsection  % sets the header for the section and includes any subsections
+  {\href{https://www.jkuat.ac.ke}{Jomo Kenyatta University of Agriculture and Technology}}
+  {\textsc{Nairobi, Kenya}} {%
+  \headedsubsection  % sets the header for a subsection and contains usually body text
+    {Research Assistant}
+    {Apr \apo19 -- Aug \apo19}
+    {\bodytext{Placed in an AI research program where I was tasked
+        with mining, analysis and categorization of data.
+      }
+    }
+    }
+
+\headedsection
+{\href{http://www.littlekidogo.co.za}{Little Kidogo}}
+  {\textsc{Remote}} {%
+  \headedsubsection
+    {Front-end Engineer Intern}
+    {Sep \apo18 -- Apr \apo19}
+    {\bodytext{My first internship experience, I was trained in web
+        development using Elm. I became responsible for building web
+        components and consuming back-end GraphQL resources in front-end projects.}}
+}
+
+\vspace{-0.2em}
+%\begin{center}
+ % \emph{\small Please refer to \href{}{} for a more complete list of work experience along with recommendations.}
+%\end{center}
+
+
+\spacedhrule{0.5em}{-0.4em}
+
+\roottitle{Education}
+
+\headedsection
+  {\href{https://www.jkuat.ac.ke}{Jomo Kenyatta University of
+Agriculture and Technology}}
+  {\textsc{Nairobi, Kenya}} {%
+  \headedsubsection
+    {BSc in Computer Science}
+    {2017 -- 2021}
+    {}
+}
+
+\spacedhrule{0.5em}{-0.4em}
+
+\roottitle{Skills}
+
+\inlineheadsection  % special section that has an inline header with a 'hanging' paragraph
+  {Technical expertise:}
+  {Linux administration skills (e.g.\ Bash scripting,
+    Apache/\acr{NGINX}, Postgres/My/No\acr{SQL}). Big
+    fan of Agile methodologies, continuous delivery and functional
+    programming.  Enjoys writing C/\nsp Python/\nsp Go/\nsp Elm/\nsp
+    Haskell and some intermediate x86 assembly.  Solid knowledge of backend web technology stack. Well
+    experienced with containerization (Docker).  Emacs user.
+  }
+
+\vspace{0.5em}
+\inlineheadsection
+  {Natural languages:}
+  {Luo \emph{(mother tongue)}, Swahili \emph{(national language)}, English \emph{(full professional proficiency)}, German \emph{(beginner)}.}
+
+
+\spacedhrule{1.6em}{-0.4em}
+
+\roottitle{Interests}
+
+\inlineheadsection
+  {Non-exhaustive and in alphabetical order:}
+  {art, comic books, emulation, functional programming, history, music, philosophy.}
+
+
+\end{document}
